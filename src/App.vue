@@ -17,8 +17,13 @@ export default {
   },
   methods: {
     fetchCards(url) {
-      axios.get(url).then((card) => {
-        console.log(card.data.data);
+      axios.get(url).then((response) => {
+        const cardData = response.data.data.map((card) => {
+          const { id } = card;
+          return;
+        });
+        store.cards;
+        console.log();
       });
     },
   },
